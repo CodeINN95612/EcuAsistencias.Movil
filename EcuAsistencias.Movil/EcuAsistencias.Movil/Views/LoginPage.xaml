@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:EcuAsistencias.Movil.Dtos"
+             mc:Ignorable="d"
+             x:Class="EcuAsistencias.Movil.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content >
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Editor VerticalOptions="Center" Placeholder="Identificación" Text="{Binding Login.Identificacion}"/>
+            <Entry IsPassword="True" Text="{Binding Login.Contrasenia}"/>
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <ActivityIndicator Color="Red" x:Name="progreso"/>
+            <Label Text="Ejemplo" TextColor="Red" x:Name="txtError" FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

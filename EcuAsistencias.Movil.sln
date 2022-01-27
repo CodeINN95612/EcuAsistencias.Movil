@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcuAsistencias.Movil.Android", "EcuAsistencias.Movil\EcuAsistencias.Movil.Android\EcuAsistencias.Movil.Android.csproj", "{62BD140A-8205-44C5-8A7E-B61788569C9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcuAsistencias.Movil", "EcuAsistencias.Movil\EcuAsistencias.Movil\EcuAsistencias.Movil.csproj", "{B6BF5287-D2A8-442C-85C1-768AC853192E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62BD140A-8205-44C5-8A7E-B61788569C9D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BF5287-D2A8-442C-85C1-768AC853192E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F377D2E-63DF-443E-BFE8-59928B2111F9}
+	EndGlobalSection
+EndGlobal
