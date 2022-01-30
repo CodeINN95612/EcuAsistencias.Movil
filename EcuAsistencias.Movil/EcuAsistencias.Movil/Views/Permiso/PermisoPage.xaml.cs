@@ -122,13 +122,13 @@ namespace EcuAsistencias.Movil.Views.Permiso
 			{
 				IdAsistencia = AppShell.Asistencia.Id,
 				IdMotivo = motivo.Id,
-				MotivoOtros = motivo.EsOtro ? txtMotivoOtros.Text : "",
+				MotivoOtros = motivo.EsOtro ? txtMotivoOtros.Text : "N/P",
 				HoraPermiso = DateTime.Today + dteHora.Time,
 				TiempoPermisoHoras = new TimeSpan(duracion.Horas, duracion.Minutos, 0)
 			};
 
 			await PermisoSalidaService.GuardarAsync(permiso);
-
+			btnEnviar.IsEnabled = false;
 		}
 
 		private void Error(string error)
