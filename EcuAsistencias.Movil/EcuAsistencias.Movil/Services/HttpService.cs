@@ -100,7 +100,7 @@ namespace EcuAsistencias.Core.Servicios
 			return retorno;
 		}
 
-		public static async Task Post<T>(string controller, T objeto)
+		public static async Task<T> Post<T>(string controller, T objeto)
 		{
 			using (HttpClient cliente = new HttpClient())
 			{
@@ -118,6 +118,8 @@ namespace EcuAsistencias.Core.Servicios
 				{
 					HttpResponseMessage respuesta = await cliente.SendAsync(request);
 					respuesta.EnsureSuccessStatusCode();
+					string json = await respuesta.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<T>(json);
 				}
 				catch (Exception e)
 				{

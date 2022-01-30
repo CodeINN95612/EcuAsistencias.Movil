@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcuAsistencias.Movil.Views.Permiso.PermisoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Permiso"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                   Margin="0, 25, 0, 0" FontSize="50" FontAttributes="Bold"/>
+            <StackLayout Margin="25, 10, 25, 0" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+                <Label Text="Hora" HorizontalOptions="Center" 
+                       VerticalOptions="CenterAndExpand" FontSize="20"/>
+                <TimePicker FontSize="20" x:Name="dteHora"/>
+            </StackLayout>
+            <Picker Title="Tiempo de Duracion" Margin="25, 10, 25, 0" x:Name="cmbTiempoDuracion" ItemDisplayBinding="{Binding Nombre}"/>
+            <Picker Title="Motivo de Permiso" Margin="25, 10, 25, 0" x:Name="cmbMotivo" ItemDisplayBinding="{Binding Detalle}"/>
+            <Editor Placeholder="Otros" Margin="25, 10, 25, 0" x:Name="txtMotivoOtros" />
+            <Button Margin="25, 20, 25, 10" CornerRadius="10" Text="Enviar" FontSize="20" x:Name="btnEnviar" Clicked="btnEnviar_Clicked"/>
+            <Label Text="" TextColor="Red" x:Name="txtError"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

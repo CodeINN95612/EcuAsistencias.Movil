@@ -18,13 +18,13 @@ namespace EcuAsistencias.Core.Servicios
 		{
 			return await HttpService.GetApiById<AsistenciaDto, int>(Controller, id);
 		}
-		public static async Task GuardarAsync(AsistenciaDto asistencia)
+		public static async Task<AsistenciaDto> GuardarAsync(AsistenciaDto asistencia)
 		{
 			//Validar
 			if (!AsistenciaValido(asistencia))
-				return;
+				return new AsistenciaDto();
 
-			await HttpService.Post(Controller, asistencia);
+			return await HttpService.Post(Controller, asistencia);
 		}
 
 		public static async Task EliminarAsync(AsistenciaDto asistencia)

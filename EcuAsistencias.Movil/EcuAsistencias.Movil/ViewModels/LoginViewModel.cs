@@ -1,6 +1,7 @@
 ﻿using EcuAsistencias.Core.Servicios;
 using EcuAsistencias.Dtos;
 using EcuAsistencias.Movil.Views;
+using EcuAsistencias.Movil.Views.Asistencia;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,7 +21,11 @@ namespace EcuAsistencias.Movil.ViewModels
 		public LoginViewModel(Label error, ActivityIndicator progreso)
 		{
 			LoginCommand = new Command(OnLoginClicked);
-			Login = new UsuarioLoginDto();
+			Login = new UsuarioLoginDto()
+			{
+				Contrasenia = string.Empty,
+				Identificacion = string.Empty,
+			};
 			_LabelError = error;
 			_Progreso = progreso;
 		}
@@ -38,7 +43,8 @@ namespace EcuAsistencias.Movil.ViewModels
 			}
 			else
 			{
-				await Shell.Current.GoToAsync($"//{nameof(TestPage)}");
+				AppShell.Sesion = Login;
+				await Shell.Current.GoToAsync($"//{nameof(AsistenciaPage)}");
 			}
 
 			_Progreso.IsRunning = false;

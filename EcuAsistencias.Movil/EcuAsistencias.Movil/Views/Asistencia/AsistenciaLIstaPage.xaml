@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcuAsistencias.Movil.Views.Asistencia.AsistenciaLIstaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Asistencias del Día"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="40" FontAttributes="Bold" Margin="0, 25, 0, 20"/>
+            <ListView SelectionMode="None" x:Name="lista">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox IsChecked="{Binding Asiste}"  Margin="20, 0, 0, 0" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" IsEnabled="False"/>
+                                <Label Text="{Binding NombreCompleto}"  HorizontalOptions="Start" VerticalOptions="CenterAndExpand" FontSize="18"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

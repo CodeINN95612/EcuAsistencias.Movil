@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcuAsistencias.Movil.Views.Asistencia.AsistenciaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Asistencia"
+                VerticalOptions="Start" Margin="0, 25, 0, 0"
+                HorizontalOptions="CenterAndExpand" FontSize="50" FontAttributes="Bold"/>
+            <TimePicker x:Name="dteTiempo" HorizontalOptions="CenterAndExpand" IsEnabled="False" FontAttributes="Bold" FontSize="30"/>
+            <Button x:Name="btnIngresar" Margin="25, 50, 25, 10" CornerRadius="10" Text="Ingresar" FontSize="20" Clicked="btnIngresar_Clicked"/>
+            <Button x:Name="btnSalir" Margin="25, 10, 25, 10" CornerRadius="10" Text="Salir" FontSize="20" BackgroundColor="#FF4F4F" Clicked="btnSalir_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
